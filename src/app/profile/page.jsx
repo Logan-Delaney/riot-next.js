@@ -29,11 +29,6 @@ export default function Profile() {
     if (loading) return <div>Loading...</div>
   
   return (
-    <div>
-      <h1>WLD Riot</h1>
-      <div>
-        <p>Login</p>
-      </div>
       <div>
         <p>GameName: {gamename}</p>
         <p>Tagline: {tagline}</p>
@@ -46,6 +41,5 @@ export default function Profile() {
         <p>Matches:</p>
         <p>{data.matches[0].champion}</p>
       </div>
-    </div>
   );
 }

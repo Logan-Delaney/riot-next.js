@@ -21,14 +21,9 @@ export default function Home() {
   };
   return (
     <>
-      <div>
-        <h1>WLD Riot</h1>
-        <div>
-          <p>Login</p>
-        </div>
-      </div>
-      <div>
+      <div className={styles.container}>
         <input
+        className={styles.gamename}
           type="text"
           placeholder="GameName"
           value={gamename}
@@ -37,14 +32,24 @@ export default function Home() {
         />
 
         <input
+        className={styles.hashtag}
           type="text"
-          placeholder="#NA1"
+          value='#'
+          maxLength={1}
+          readOnly
+        />
+
+        <input
+        className={styles.tagline}
+          type="text"
+          placeholder="NA1"
           value={tagline}
           onChange={handleTaglineChange}
           maxLength={5}
         />
-
+        <div>
         <button onClick={handleSubmit}>Search</button>
+        </div>
       </div>
     </>
   );
