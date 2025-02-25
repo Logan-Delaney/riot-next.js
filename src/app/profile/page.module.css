@@ -1,0 +1,35 @@
+.profile_top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile_top_left {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile_top_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.matches_table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
