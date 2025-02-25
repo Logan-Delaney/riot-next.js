@@ -70,9 +70,8 @@ export default function Profile() {
     </div>
     <div className={styles.stats}>
         <h2>Stats:</h2>
-        <h4>Wins: {wins}</h4>
-        <h4>Losses: {losses}</h4>
-        <h4>Win Rate: {getWinRate(wins, losses)}%</h4>
+        <h4>Solo/Duo Winrate: {data.ranked.Solo_Winrate}</h4>
+        <h4>Flex Winrate: {data.ranked.Flex_Winrate}</h4>
     </div>
     <div className={styles.matches}>
         <h2>Matches</h2>
