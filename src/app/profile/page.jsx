@@ -2,9 +2,11 @@
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const gamename = searchParams.get("gamename");
   const tagline = searchParams.get("tagline");
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -36,6 +38,11 @@ export default function Profile() {
       return "Loss";
     }
   }
+
+  const handleClick = (match_id) => {
+    router.push(`/match?match_id=${match_id}&puuid=${data.riot_account.puuid}`);
+  }
+
 
   const wins = data.matches.filter((match) => match.win === true).length;
   const losses = data.matches.filter((match) => match.win === false).length;
@@ -88,7 +95,7 @@ export default function Profile() {
             </thead>
             <tbody>
                 {data.matches.map((match) => (
-                <tr key={match.game_id}>
+                <tr key={match.game_id} onClick={() => handleClick(match.game_id)}>
                     <td>{match.champion}</td>
                     <td>{gameResult(match.win)}</td>
                     <td>{match.kda}</td>
