@@ -26,3 +26,6 @@ out
 .env.local
 .env.development
 .env.production
+
+# Assets
+public/splash
