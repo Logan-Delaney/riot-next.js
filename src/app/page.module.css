@@ -12,15 +12,19 @@
   z-index: 1;
 }
 
-.gamename {
-  border-right: none;
-  padding-right: 0;
-  max-height: 20vh;
-  font-size: 12vh;
-  max-width: 60vw;
+/* Common styles for all input fields */
+.gamename, .hashtag, .tagline {
   outline: none;
   background-color: rgba(205, 250, 250, 0.7);
   backdrop-filter: blur(3px);
+  height: min(12vh, calc(2vw + 30px)); /* Responsive height based on viewport */
+  font-size: min(12vh, calc(2vw + 20px)); /* Responsive font size */
+}
+
+.gamename {
+  border-right: none;
+  padding-right: 0;
+  max-width: 60vw;
 }
 
 .hashtag {
@@ -28,23 +32,64 @@
   padding-left: 0;
   border-right: none;
   padding-right: 0;
-  max-height: 20vh;
-  font-size: 12vh;
   max-width: 4vw;
-  outline: none;
-  background-color: rgba(205, 250, 250, 0.7);
-  backdrop-filter: blur(3px);
 }
 
 .tagline {
   border-left: none;
   padding-left: 0;
-  max-height: 20vh;
-  font-size: 12vh;
   max-width: 25vw;
-  outline: none;
-  background-color: rgba(205, 250, 250, 0.7);
-  backdrop-filter: blur(3px);
+}
+
+/* Media queries for more precise control */
+@media (max-width: 4000px) {
+  .gamename, .hashtag, .tagline {
+    height: 15vh;
+    font-size: 13vh;
+  }
+}
+
+@media (max-width: 1600px) {
+  .gamename, .hashtag, .tagline {
+    height: 12vh;
+    font-size: 10vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gamename, .hashtag, .tagline {
+    height: 10vh;
+    font-size: 8vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .gamename, .hashtag, .tagline {
+    height: 8vh;
+    font-size: 6vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .gamename, .hashtag, .tagline {
+    height: 6vh;
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .gamename, .hashtag, .tagline {
+    height: 4vh;
+    font-size: 3vh;
+  }
+  
+  .gamename {
+    max-width: 50vw;
+  }
+  
+  .tagline {
+    max-width: 30vw;
+  }
 }
 
 .backgroundContainer {
@@ -61,7 +106,7 @@
   position: absolute;
   top: 50px;
   left: 30;
-  width: 95vw;
+  width: 90vw;
   height: 85vh;
   background-size: cover;
   background-position: center;
@@ -69,6 +114,7 @@
   transition: opacity 1.5s ease-in-out;
   z-index: 0;
   border-radius: 50px;
+  border: 3px solid #0AC8B9;
 }
 
 .backgroundImage.active {

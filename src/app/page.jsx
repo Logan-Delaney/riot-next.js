@@ -153,7 +153,7 @@ export default function Home() {
     "/splash/Vladimir_0.jpg",
     "/splash/Volibear_0.jpg",
     "/splash/Warwick_0.jpg",
-    "/splash/Wukong_0.jpg",
+    "/splash/MonkeyKing_0.jpg",
     "/splash/Xayah_0.jpg",
     "/splash/Xerath_0.jpg",
     "/splash/XinZhao_0.jpg",
